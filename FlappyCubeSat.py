@@ -35,9 +35,9 @@ with open("high_scores.txt", "r") as f:
 
 # Load sounds
 sound_effect = pygame.mixer.Sound("sound_design_effect_electricity_spark_002.mp3")
-sound_effect.set_volume(0.05)
+sound_effect.set_volume(0.25)
 pygame.mixer.music.load("NyanCatoriginal.mp3")
-pygame.mixer.music.set_volume(0.05)
+pygame.mixer.music.set_volume(0.75)
 pygame.mixer.music.play(-1)
 
 # Load images
