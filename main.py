@@ -23,7 +23,7 @@ started_game = False
 sound_effect = pygame.mixer.Sound("assets/sound_design_effect_electricity_spark_002.ogg")
 sound_effect.set_volume(0.25)
 pygame.mixer.music.load("assets/NyanCatoriginal.ogg")
-pygame.mixer.music.set_volume(0.75)
+pygame.mixer.music.set_volume(0)
 pygame.mixer.music.play(-1)
 
 # Load high scores
