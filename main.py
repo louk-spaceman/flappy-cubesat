@@ -19,6 +19,13 @@ pipe_width = int(WIDTH/20)
 cubesat_width = int(HEIGHT/10)
 started_game = False
 
+# Load sounds
+sound_effect = pygame.mixer.Sound("assets/sound_design_effect_electricity_spark_002.ogg")
+sound_effect.set_volume(0.25)
+pygame.mixer.music.load("assets/NyanCatoriginal.ogg")
+pygame.mixer.music.set_volume(0.75)
+pygame.mixer.music.play(-1)
+
 # Load high scores
 with open("high_scores.txt", "r") as f:
     high_score = int(f.read().strip())
@@ -61,10 +68,10 @@ async def main():
             if event.type == pygame.QUIT:
                 game_over = True
             elif event.type == pygame.MOUSEBUTTONDOWN:
-                cubesat.flap(HEIGHT)
+                cubesat.flap(HEIGHT, sound_effect)
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
-                    cubesat.flap(HEIGHT)
+                    cubesat.flap(HEIGHT, sound_effect)
 
         # Update objects
         cubesat.update()

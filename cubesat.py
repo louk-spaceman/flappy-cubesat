@@ -10,9 +10,9 @@ class Cubesat:
         self.width = cubesat_width
         self.height = cubesat_width
 
-    def flap(self, HEIGHT: int):
+    def flap(self, HEIGHT: int, sound_effect: pygame.mixer.Sound):
         self.velocity = int(-HEIGHT/73)
-        #sound_effect.play()
+        sound_effect.play()
 
     def update(self):
         self.velocity += self.gravity
