@@ -7,7 +7,7 @@ class Pipe:
         self.y_gap = int(HEIGHT/2 - (score/69)*(HEIGHT/2))
         self.top_height = random.randint(75,HEIGHT-self.y_gap-75)
         self.bottom_height = HEIGHT - self.top_height - self.y_gap
-        self.speed = WIDTH/50
+        self.speed = WIDTH/60
         self.scored = False
 
     def off_screen(self):
